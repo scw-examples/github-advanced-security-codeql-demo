@@ -6,7 +6,7 @@ const port = 3000
 // Second Comment Line
 app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/demo/:id', (req, res) => {
-    res.send(`Hello Guest`)
+    res.send(`Hello ${req.params.id}`)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
